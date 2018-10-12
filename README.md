@@ -7,7 +7,7 @@ Ex: If you adding the **Hamilton Path** algorithm using java, the folder structu
     /BackTracking/HamiltonPath/
 ```
 
-and the file name would be **"HamiltonPath.java" or HamiltonPath.txt**
+and the file name would be **" HamiltonPath.java " or " HamiltonPath.txt "**
 
 ### List of Algorithms 
 
