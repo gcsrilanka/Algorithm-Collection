@@ -1,11 +1,13 @@
 # Algorithm-Collection
 You can add following algorithms using any language to repo. please maintain the folder strcuture accordng to the following list structure.
 
-Ex: If you adding the **Hamilton Path** algorithm
+Ex: If you adding the **Hamilton Path** algorithm using java, the folder structure would be,
     
  ```
-    /BackTracking/Hamilton%20Path
+    /BackTracking/HamiltonPath/
 ```
+
+and the file name would be **"HamiltonPath.java" or HamiltonPath.txt**
 
 ### List of Algorithms 
 
