@@ -16,6 +16,6 @@ int main()
             n2 -= n1;
     }
 
-    cout << "HCF = " << n1;
+    cout << "HCF/GCD = " << n1;
     return 0;
 }
