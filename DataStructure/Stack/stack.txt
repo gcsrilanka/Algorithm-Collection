@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 5
+
+int top=-1;
+int array[SIZE];
+
+void push(int a)
+{
+    if(top==SIZE-1)
+    {
+        printf("Empty");
+    }
+    else
+    {
+        top++;
+        array[top]=a;
+    }
+}
+
+int pop(int x)
+{
+    if(top==-1)
+        printf("Empty");
+    else
+        top--;
+}
+
+int peek(int i)
+{
+    printf("%d",i);
+}
+void print()
+{
+    int a;
+    printf("Array values are");
+    for(a=0;a<=top;a++)
+    {
+        printf("\n%d ",array[a]);
+    }
+}
+int main()
+{
+
+    push(10);
+    push(1);
+    push(5);
+
+    print();
+
+    return 0;
+}
