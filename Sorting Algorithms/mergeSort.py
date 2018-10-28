@@ -1,3 +1,5 @@
+#mergeSort Algorithm done by python
+
 def mergeSort(A,p,r):
 
     if(p < r):
