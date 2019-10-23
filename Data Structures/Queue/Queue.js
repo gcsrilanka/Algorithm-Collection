@@ -15,7 +15,7 @@ class Queue {
 
     /**
      * Retrieves and returns the first element of the queue
-     * @returns first element of the queue
+     * @returns first element of the queue fgdhsjk
      */
     dequeue() {
         return this._queue.shift();
@@ -33,7 +33,7 @@ class Queue {
     /**
      * Clears the queue
      */
-    empty() {
+    empty() {bnm
         this._queue = [];
     }
 
