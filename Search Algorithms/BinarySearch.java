@@ -1,26 +1,33 @@
-class BinarySearchExample{  
- public static void binarySearch(int arr[], int first, int last, int key){  
-   int mid = (first + last)/2;  
-   while( first <= last ){  
-      if ( arr[mid] < key ){  
-        first = mid + 1;     
-      }else if ( arr[mid] == key ){  
-        System.out.println("Element is found at index: " + mid);  
-        break;  
-      }else{  
-         last = mid - 1;  
-      }  
-      mid = (first + last)/2;  
-   }  
-   if ( first > last ){  
-      System.out.println("Element is not found!");  
-   }  
- }  
+import java.util.Scanner;
 
- public static void main(String args[]){  
-        int arr[] = {10,20,30,40,50};  
-        int key = 30;  
-        int last=arr.length-1;  
-        binarySearch(arr,0,last,key);     
- }  
-}
+class BinarySearch { 
+
+    int binarySearch(int arr[], int l, int r, int value) 
+    { 
+        if (r >= l) { 
+            int mid = l + (r - l) / 2; 
+            if (arr[mid] == value) 
+                return mid; 
+            if (arr[mid] > value) 
+                return binarySearch(arr, l, mid - 1, value); 
+            return binarySearch(arr, mid + 1, r, value); 
+        } 
+        return -1; 
+    } 
+
+    public static void main(String args[]) 
+    { 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number you want to search:");
+        int value = sc.nextInt();
+
+        BinarySearch binarySearch = new BinarySearch(); 
+        int arr[] = { 2, 3, 4, 10, 40 }; 
+        int n = arr.length; 
+        int result = binarySearch.binarySearch(arr, 0, n - 1, value); 
+        if (result == -1) 
+            System.out.println("Not Found"); 
+        else
+            System.out.println("Found at index :" + result); 
+    } 
+} 
