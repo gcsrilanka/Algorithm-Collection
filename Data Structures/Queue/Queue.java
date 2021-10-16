@@ -1,5 +1,3 @@
-
-
 public class Queue {
 
 	 private QueueNode front;
