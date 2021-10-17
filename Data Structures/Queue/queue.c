@@ -13,7 +13,7 @@ typedef struct Node Node;
 /*-------------------------------------- Queue Functions -------------------------------------- */
 /** Ideally these should go in a seperate Header file (ie. queue.h) along with the self referencing structure
  * 
- * Note : Queue is a ADT which is also a derived DS of LinkedList
+ * Note : Queue is a ADT which is also a derived DS from LinkedList
  * 
  * Queue Functions
  * Create Node  : create_node
@@ -95,7 +95,7 @@ void print_queue(Node *head) {
 
     printf(" ]\n");
 }
-/* --------------------------------- End of Linked List Functions ----------------------------------- */
+/* --------------------------------- End of Queue Functions ----------------------------------- */
 
 int main() {
     Node *queue = NULL;         // Pointer to the First Node of the Queue
