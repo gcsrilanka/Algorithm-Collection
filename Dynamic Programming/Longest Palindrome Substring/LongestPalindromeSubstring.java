@@ -4,7 +4,7 @@ class LongestPalindromeSubstring{
 
 public static void main(String[] args)
 {
-	String str = "TestStringeeeeeeeee";
+	String str = "TestStringeee";
 	System.out.print("\nLength is: " + longestPalSubstring(str));
 }
 
