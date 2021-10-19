@@ -105,7 +105,6 @@ int main() {
     pop(&stack);
     peek(stack);
     
-
     push(&stack,40);
     push(&stack,80);
 
