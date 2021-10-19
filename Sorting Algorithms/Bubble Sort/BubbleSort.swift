@@ -18,7 +18,7 @@ func bubbleSort(_ dataArray: [Int]?) -> [Int] {
     
     //check if dataArray length is equal 1
     if unsortedArray.count == 1 {
-        return dataArray!
+        return unsortedArray
     }
     
     let lastPosition = unsortedArray.count - 1
