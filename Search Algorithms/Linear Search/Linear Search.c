@@ -36,8 +36,8 @@ int main(){
         exit(-1);         
     }
 
-    int arr[size];      // for demonstration purposes only!,
-                        // it's better to use heap (malloc) when dealing with variable array sizes rather than implementing on Stack
+
+    int *arr = malloc(size * sizeof(int));  // we should always define a variable size array on heap, because 
 
 
     for(i=0;i<size;i++)
