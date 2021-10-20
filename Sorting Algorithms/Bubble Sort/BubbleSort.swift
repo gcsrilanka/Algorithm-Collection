@@ -17,7 +17,7 @@ func bubbleSort(_ dataArray: [Int]?) -> [Int] {
     }
     
     //check if dataArray length is equal 1
-    if unsortedArray.count < 2 {
+    guard unsortedArray.count > 1 else {
         return unsortedArray
     }
     
