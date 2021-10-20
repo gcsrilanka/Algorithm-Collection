@@ -13,7 +13,7 @@ func bubbleSort(_ dataArray: [Int]?) -> [Int] {
     
     //check if dataArray is nil
     guard var unsortedArray = dataArray else {
-        return []
+        fatalError("Bubble Sort failed")
     }
     
     //check if dataArray length is equal 1
@@ -28,9 +28,7 @@ func bubbleSort(_ dataArray: [Int]?) -> [Int] {
         shouldSwap = false
         for i in 1...lastPosition {
             if unsortedArray[i-1] > unsortedArray[i] {
-                let tempValue = unsortedArray[i-1]
-                unsortedArray[i-1] = unsortedArray[i]
-                unsortedArray[i] = tempValue
+                unsortedArray.swapAt(i-1, i)
                 shouldSwap = true
             }
         }
@@ -49,7 +47,7 @@ print("Sorted := \(sortedArray1)") //output := Sorted := [0, 1, 1, 3, 4, 5, 8]
 let dataArray2: [Int]? = nil
 print("Unsorted := \(dataArray2)") //output := Unsorted := nil
 let sortedArray2 = bubbleSort(dataArray2)
-print("Sorted := \(sortedArray2)") //output := Sorted := []
+print("Sorted := \(sortedArray2)") //output := Fatal error: Bubble Sort failed
 
 let dataArray3 = [5]
 print("Unsorted := \(dataArray3)") //output := Unsorted := [5]
