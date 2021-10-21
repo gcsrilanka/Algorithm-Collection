@@ -8,7 +8,6 @@ class Node {
 	int color; // 1 . Red, 0 . Black
 }
 
-
 // Class RedBlackTree implements the operations in Red Black Tree
 public class RedBlackTree {
 	private Node root;
@@ -234,20 +233,20 @@ public class RedBlackTree {
 
 	private void printHelper(Node root, String indent, boolean last) {
 		// Print the tree structure on the screen
-	   	if (root != TNULL) {
-		   System.out.print(indent);
-		   if (last) {
-		      System.out.print("R----");
-		      indent += "     ";
-		   } else {
-		      System.out.print("L----");
-		      indent += "|    ";
-		   }
-            
-           String sColor = root.color == 1?"RED":"BLACK";
-		   System.out.println(root.data + "(" + sColor + ")");
-		   printHelper(root.left, indent, false);
-		   printHelper(root.right, indent, true);
+		if (root != TNULL) {
+			System.out.print(indent);
+			if (last) {
+				System.out.print("R----");
+				indent += "     ";
+			} else {
+				System.out.print("L----");
+				indent += "|    ";
+			}
+
+			String sColor = root.color == 1?"RED":"BLACK";
+			System.out.println(root.data + "(" + sColor + ")");
+			printHelper(root.left, indent, false);
+			printHelper(root.right, indent, true);
 		}
 	}
 
@@ -344,7 +343,7 @@ public class RedBlackTree {
 			y.left.parent = x;
 		}
 
-        y.parent = x.parent;
+		y.parent = x.parent;
 		if (x.parent == null) {
 			this.root = y;
 		} else if (x == x.parent.left) {
@@ -353,7 +352,7 @@ public class RedBlackTree {
 			x.parent.right = y;
 		}
 
-        y.left = x;
+		y.left = x;
 		x.parent = y;
 	}
 
@@ -437,20 +436,20 @@ public class RedBlackTree {
 
 	// print the tree structure on the screen
 	public void prettyPrint() {
-        printHelper(this.root, "", true);
+		printHelper(this.root, "", true);
 	}
 	
 	public static void main(String [] args){
-    	RedBlackTree bst = new RedBlackTree();
-        bst.insert(8);
-    	bst.insert(18);
-    	bst.insert(5);
-    	bst.insert(15);
-    	bst.insert(17);
-    	bst.insert(25);
-    	bst.insert(40);
-    	bst.insert(80);
-    	bst.deleteNode(25);
-    	bst.prettyPrint();
+		RedBlackTree bst = new RedBlackTree();
+		bst.insert(8);
+		bst.insert(18);
+		bst.insert(5);
+		bst.insert(15);
+		bst.insert(17);
+		bst.insert(25);
+		bst.insert(40);
+		bst.insert(80);
+		bst.deleteNode(25);
+		bst.prettyPrint();
 	}
 }
