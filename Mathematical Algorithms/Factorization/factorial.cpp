@@ -3,19 +3,16 @@ using namespace std;
 
 int main()
 {
-    int n1, n2;
+    int n, factorial = 1;
 
-    cout << "Enter two numbers: ";
-    cin >> n1 >> n2;
+    cout << "Enter number to find the factorial: ";
+    cin >> n;
     
-    while(n1 != n2)
+    for (int c=1; c<=n; c++)
     {
-        if(n1 > n2)
-            n1 -= n2;
-        else
-            n2 -= n1;
+        factorial = factorial*c;
     }
 
-    cout << "HCF = " << n1;
+    cout << "Factorial of "<< n << "= " << factorial << endl;
     return 0;
 }
